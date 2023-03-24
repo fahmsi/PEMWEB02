@@ -13,3 +13,4 @@ function luasSegitiga($alas, $tinggi)
 {
     echo 1/2 * $alas * $tinggi;
 }
+?>
