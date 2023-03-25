@@ -9,25 +9,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <?php 
-        require_once 'dbkoneksi.php';
-    ?>
-    <?php 
-    $sql = "SELECT * FROM pelanggan";
-    $rs = $dbh->query($sql);
-    ?>
-    <a class="btn btn-success" href="form_pelanggan.php" role="button">Create pelanggan</a><br><br>
-    <table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
+<?php 
+    require_once 'dbkoneksi.php';
+?>
+<?php 
+   $sql = "SELECT * FROM pelanggan";
+   $rs = $dbh->query($sql);
+?>
+
+      <a class="btn btn-success" href="form_pelanggan.php" role="button">Create Pelanggan</a>
+        <table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>jenis kelamin</th>
-                    <th>tempat lahir</th>
-                    <th>tanggal lahir</th>
-                    <th>email</th>
-                    <th>kartu id</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
+                    <th>Kartu</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,18 +47,18 @@
                         <td><?=$row['email']?></td>
                         <td><?=$row['kartu_id']?></td>
                         <td>
-                        <a class="btn btn-primary" href="view_produk.php?id=<?=$row['id']?>">View</a>
-                        <a class="btn btn-primary" href="form_produk.php?idedit=<?=$row['id']?>">Edit</a>
-                        <a class="btn btn-primary" href="delete_produk.php?iddel=<?=$row['id']?>"
-                        onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}">Delete</a>
-                        </td>
+<a class="btn btn-primary" href="view_pelanggan.php?id=<?=$row['id']?>">View</a>
+<a class="btn btn-primary" href="form_pelanggan.php?idedit=<?=$row['id']?>">Edit</a>
+<a class="btn btn-primary" href="delete_pelanggan.php?iddel=<?=$row['id']?>"
+onclick="if(!confirm('Anda Yakin Hapus Data Pelanggan <?=$row['nama']?>?')) {return false}"
+>Delete</a>
+</td>
                     </tr>
                 <?php 
                 $nomor++;   
                 } 
                 ?>
             </tbody>
-    </table>  
-
+        </table>    
 </body>
 </html>
