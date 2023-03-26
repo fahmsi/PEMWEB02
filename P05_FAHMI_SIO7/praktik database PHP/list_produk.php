@@ -17,7 +17,7 @@
     $rs = $dbh->query($sql);
     ?>
     <br>
-    <a class="btn btn-primary" href="form_produk.php" role="button">Create Produk +</a><br><br>
+    <a class="btn btn-primary" href="form_produk.php" role="button">Create Produk <i class="fa fa-cart-plus" aria-hidden="true"></i></a><br><br>
     <table class="table table-hover table-striped" width="100%" border="1" cellspacing="2" cellpadding="2">
         <thead>
                 <tr>
@@ -41,10 +41,10 @@
                         <td><?=$row['harga_jual']?></td>
                         <td><?=$row['stok']?></td>
                         <td>
-                            <a class="btn btn-success" href="view_produk.php?id=<?=$row['id']?>">View</a>
-                            <a class="btn btn-secondary" href="form_produk.php?idedit=<?=$row['id']?>">Edit</a>
+                            <a class="btn btn-success" href="view_produk.php?id=<?=$row['id']?>"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
+                            <a class="btn btn-secondary" href="form_produk.php?idedit=<?=$row['id']?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
                             <a class="btn btn-danger" href="delete_produk.php?iddel=<?=$row['id']?>"
-                            onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}">Delete</a>
+                            onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
                         </td>
                     </tr>
                 <?php 
