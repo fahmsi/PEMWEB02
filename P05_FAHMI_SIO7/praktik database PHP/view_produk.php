@@ -24,7 +24,7 @@ require_once 'dbkoneksi.php';
     //echo 'NAMA PRODUK ' . $row['nama'];
 ?>
 
-<table class="table table-striped">
+<table class="table table-hover table-striped">
     <tbody>
         <tr>   <td>ID</td><td><?=$row['id']?></td></tr>
         <tr>   <td>Kode</td><td><?=$row['kode']?></td></tr>

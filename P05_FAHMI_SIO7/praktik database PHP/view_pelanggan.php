@@ -24,10 +24,10 @@ require_once 'dbkoneksi.php';
     //echo 'NAMA PELANGGAN ' . $row['nama'];
 ?>
 
-<table class="table table-striped">
+<table class="table table-hover table-striped">
     <tbody>
-        <tr><td>No</td><td><?=$row['id']?></td></tr>
-        <tr>  <td>Kode</td><td><?=$row['kode']?></td></tr>
+        <tr>   <td>No</td><td><?=$row['id']?></td></tr>
+        <tr>   <td>Kode</td><td><?=$row['kode']?></td></tr>
         <tr>   <td>Nama</td><td><?=$row['nama']?></td></tr>
         <tr>   <td>Jenis Kelamin</td><td><?=$row['jk']?></td></tr>
         <tr>   <td>Tempat Lahir</td><td><?=$row['tmp_lahir']?></td></tr>
