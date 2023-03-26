@@ -26,7 +26,7 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa fa-anchor"></i>
+                <i class="fa fa-usd" aria-hidden="true"></i>
               </div>
             </div> 
             <input id="kode" name="kode" type="text" class="form-control"
@@ -41,7 +41,7 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa fa-adjust"></i>
+                <i class="fa fa-user" aria-hidden="true"></i>
               </div>
             </div> 
             <input id="nama" name="nama" type="text" class="form-control" 
@@ -53,15 +53,16 @@
         <label for="harga_beli" class="col-4 col-form-label">Jenis Kelamin</label> 
         <div class="col-8">
           <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <i class="fa fa-arrow-circle-o-left"></i>
-              </div>
-            </div> 
-            <input id="jk" name="jk" 
-            value="L" type="radio" class="form-control" <?php if(isset($_GET["idedit"])) {if($row["jk"] == "L"){echo "checked";}} ?>>Laki - Laki
-            <input id="jk" name="jk" 
-            value="P" type="radio" class="form-control" <?php if(isset($_GET["idedit"])) {if($row["jk"] == "P"){echo "checked";}} ?>>Perempuan
+            <div class="input-group-text">
+              <i class="fa fa-male" aria-hidden="true"></i> 
+            </div>
+            <input id="jk" name="jk" value="L" type="radio" class="form-control"
+            <?php if(isset($_GET["idedit"])) {if($row["jk"] == "L"){echo "checked";}} ?>>
+            <div class="input-group-text">
+              <i class="fa fa-female" aria-hidden="true"></i> 
+            </div>
+            <input id="jk" name="jk" value="P" type="radio" class="form-control"
+            <?php if(isset($_GET["idedit"])) {if($row["jk"] == "P"){echo "checked";}} ?>>
           </div>
         </div>
       </div>
@@ -71,7 +72,7 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa fa-arrow-circle-up"></i>
+                <i class="fa fa-hospital-o" aria-hidden="true"></i>
               </div>
             </div> 
             <input id="tmp_lahir" name="tmp_lahir" value="<?php if (isset($_GET["idedit"])) {echo $row["tmp_lahir"];} ?>"
@@ -85,7 +86,7 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa fa-arrow-circle-right"></i>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
               </div>
             </div> 
             <input id="tgl_lahir" name="tgl_lahir" 
@@ -100,7 +101,7 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa fa-arrow-circle-right"></i>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div> 
             <input id="email" name="email" 
@@ -110,12 +111,12 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="jenis" class="col-4 col-form-label">Kartu</label> 
+        <label for="jenis" class="col-4 col-form-label">Kartu</label>
         <div class="col-8">
-            <?php 
-                $sqljenis = "SELECT * FROM kartu";
-                $rsjenis = $dbh->query($sqljenis);
-            ?>
+              <?php 
+                  $sqljenis = "SELECT * FROM kartu";
+                  $rsjenis = $dbh->query($sqljenis);
+              ?>
           <select id="kartu_id" name="kartu_id" class="custom-select">
               <?php 
                 if (isset($_GET["idedit"])) {

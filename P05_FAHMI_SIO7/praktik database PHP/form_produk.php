@@ -20,7 +20,7 @@ require_once 'dbkoneksi.php';
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-anchor"></i>
+            <i class="fa fa-usd" aria-hidden="true"></i>
           </div>
         </div> 
         <input id="kode" name="kode" type="text" class="form-control"
@@ -34,7 +34,7 @@ require_once 'dbkoneksi.php';
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-adjust"></i>
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
           </div>
         </div> 
         <input id="nama" name="nama" type="text" class="form-control" 
@@ -48,7 +48,7 @@ require_once 'dbkoneksi.php';
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-arrow-circle-o-left"></i>
+            <i class="fa fa-money" aria-hidden="true"></i>
           </div>
         </div> 
         <input id="harga_beli" name="harga_beli" 
@@ -62,7 +62,7 @@ require_once 'dbkoneksi.php';
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-arrow-circle-up"></i>
+            <i class="fa fa-plus" aria-hidden="true"></i>
           </div>
         </div> 
         <input id="stok" name="stok" value=""
@@ -76,7 +76,7 @@ require_once 'dbkoneksi.php';
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-arrow-circle-right"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
           </div>
         </div> 
         <input id="min_stok" name="min_stok" 
