@@ -10,23 +10,23 @@
 </head>
 <body>
 <?php 
-require_once '../../database/dbkoneksi.php';
-$id = $_GET['idedit'];
-$query = "DELETE FROM produk WHERE id = ?";
-$statement = $dbh->prepare($query);
-$statement->execute([$id]); 
-$result = $statement->fetch();
+ require_once '../../database/dbkoneksi.php';
+ $id = $_GET['idedit'];
+ $sql = "SELECT * FROM pelanggan WHERE id = ?";
+ $statement = $dbh->prepare($sql);
+ $statement->execute([$id]);
+ $result = $statement->fetch()
 ?>
             
-<form method="POST" action="../../proces/produk/proses_produk.php">
-    <input type="hidden" name="idedit" value="<?= $result('id')?>">
+<form method="POST" action="../../process/produk/proses_produk.php">
+    <input type="hidden" name="idedit" value="<?= $result['id'] ?>">
   <div class="form-group row">
     <label for="kode" class="col-4 col-form-label">Kode</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-usd" aria-hidden="true"></i>
+            <i class="fa fa-anchor"></i>
           </div>
         </div> 
         <input id="kode" name="kode" type="text" class="form-control"
@@ -40,7 +40,7 @@ $result = $statement->fetch();
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <i class="fa fa-adjust"></i>
           </div>
         </div> 
         <input id="nama" name="nama" type="text" class="form-control" 
@@ -54,7 +54,7 @@ $result = $statement->fetch();
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-money" aria-hidden="true"></i>
+            <i class="fa fa-arrow-circle-o-left"></i>
           </div>
         </div> 
         <input id="harga_beli" name="harga_beli" 
@@ -68,7 +68,7 @@ $result = $statement->fetch();
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-arrow-circle-up"></i>
           </div>
         </div> 
         <input id="stok" name="stok" value=""
@@ -82,7 +82,7 @@ $result = $statement->fetch();
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <i class="fa fa-minus" aria-hidden="true"></i>
+            <i class="fa fa-arrow-circle-right"></i>
           </div>
         </div> 
         <input id="min_stok" name="min_stok" 
