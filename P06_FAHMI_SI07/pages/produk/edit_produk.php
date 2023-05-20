@@ -18,7 +18,7 @@
  $result = $statement->fetch()
 ?>
             
-<form method="POST" action="../../process/produk/proses_produk.php">
+<form method="POST" action="../../proces/produk/proses_produk.php">
     <input type="hidden" name="idedit" value="<?= $result['id'] ?>">
   <div class="form-group row">
     <label for="kode" class="col-4 col-form-label">Kode</label> 

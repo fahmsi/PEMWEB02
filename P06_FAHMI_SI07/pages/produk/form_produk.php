@@ -110,8 +110,8 @@ require_once '../../database/dbkoneksi.php';
   </div> 
   <div class="form-group row">
     <div class="offset-4 col-8">
-      <input type="submit" name="proses" type="submit" 
-      class="btn btn-primary" value="Simpan"/>
+    <input type="submit" name="proses" type="submit" 
+          class="btn btn-primary" value="<?php if (isset($_GET["idedit"])) {echo "Update";} else{echo "Simpan";} ?>"/>
     </div>
   </div>
 </form>

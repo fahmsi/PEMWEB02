@@ -14,7 +14,7 @@ require_once '../../database/dbkoneksi.php';
    // array data
    $ar_data[]=$_kode; // ? 1
    $ar_data[]=$_nama; // ? 2
-   $ar_data[]=$_harga;// 3
+   $ar_data[]=$_harga;// 3    
    $ar_data[]= 1.2 * $_harga;
    $ar_data[]=$_stok;
    $ar_data[]=$_minstok;
